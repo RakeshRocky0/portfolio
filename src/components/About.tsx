@@ -1,4 +1,6 @@
 import { Code2, Lightbulb, Users } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import profileImage from "@/assets/profile.jpg";
 
 export const About = () => {
   const highlights = [
@@ -37,11 +39,12 @@ export const About = () => {
             <div className="relative">
               <div className="w-64 h-64 mx-auto relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full opacity-20 blur-2xl animate-pulse-glow" />
-                <div className="relative w-full h-full glass rounded-full flex items-center justify-center border-2 border-primary">
-                  <span className="text-8xl font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent">
+                <Avatar className="relative w-full h-full border-2 border-primary shadow-elegant">
+                  <AvatarImage src={profileImage} alt="Rakesh Nulu" className="object-cover" />
+                  <AvatarFallback className="text-4xl font-bold bg-gradient-to-br from-primary to-accent text-white">
                     RN
-                  </span>
-                </div>
+                  </AvatarFallback>
+                </Avatar>
               </div>
             </div>
           </div>
