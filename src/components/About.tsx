@@ -36,7 +36,7 @@ export const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Profile section */}
           <div className="animate-scale-in">
-            <div className="relative">
+            <div className="relative mt-8">
               <div className="w-64 h-64 mx-auto relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full opacity-20 blur-2xl animate-pulse-glow" />
                 <Avatar className="relative w-full h-full border-2 border-primary shadow-elegant">
