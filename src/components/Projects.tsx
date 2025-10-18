@@ -1,5 +1,8 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import portfolioImg from "@/assets/project-portfolio.jpg";
+import calculatorImg from "@/assets/project-calculator.jpg";
+import gameImg from "@/assets/project-game.jpg";
 
 export const Projects = () => {
   const projects = [
@@ -9,6 +12,7 @@ export const Projects = () => {
         "A personal portfolio website showcasing skills, projects, and experiences with a user-friendly, responsive design.",
       tech: ["HTML", "CSS", "JavaScript"],
       gradient: "from-primary to-accent",
+      image: portfolioImg,
     },
     {
       title: "Calculator",
@@ -16,6 +20,7 @@ export const Projects = () => {
         "A fully functional calculator with an intuitive interface and responsive design for seamless user experience across devices.",
       tech: ["HTML", "CSS", "JavaScript"],
       gradient: "from-accent to-pink-500",
+      image: calculatorImg,
     },
     {
       title: "Number Guessing Game",
@@ -23,6 +28,7 @@ export const Projects = () => {
         "An interactive Python game with efficient algorithms and engaging gameplay, demonstrating problem-solving skills.",
       tech: ["Python"],
       gradient: "from-primary to-purple-500",
+      image: gameImg,
     },
   ];
 
@@ -44,11 +50,13 @@ export const Projects = () => {
               key={index}
               className="group glass rounded-lg overflow-hidden border border-primary/30 hover:border-primary/60 transition-all hover:scale-105 hover:shadow-2xl"
             >
-              {/* Project header with gradient */}
-              <div
-                className={`h-40 bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-30 transition-opacity relative overflow-hidden`}
-              >
-                <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+              {/* Project header with image */}
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
                 <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-card to-transparent" />
               </div>
 
